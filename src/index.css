@@ -1,13 +1,182 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* height:100vh */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.App {
+    position: relative;
+    background-color: #f5f7fb;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.blob {
+    height: 25%;
+}
+
+.yellowBlob {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.blueBlob {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.quizStartPage--container {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quizStartPage--container h1 {
+    margin: 0;
+    border: 0;
+}
+.quizStartPage--container p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.quizStartPage--start {
+    background-color: #4d5b9e;
+    color: #f5f7fb;
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+}
+
+.quizpage--array {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    height: fit-content;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #293264;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    align-self: flex-start;
+    padding-left: 13%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.options {
+    display: flex;
+    width: 70%;
+    margin-left: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    font-weight: 500;
+    border: 1px solid #5863a1;
+    width: 21%;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    border-radius: 8px;
+    min-width: 175px;
+    height: max-content;
+}
+
+.selected {
+    background-color: #5f6899;
+    color: #f5f7fb;
+}
+
+.quizpage--button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.quizpage--button p {
+    margin: 5px 0;
+}
+
+.quizpage--button button {
+    margin: 10px;
+    width: 30%;
+    max-width: 150px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #4d5b9e;
+    color: #f5f7fb;
+    font-size: 18px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+.green {
+    background-color: rgb(12, 156, 108);
+    color: #f5f7fb;
+}
+.red {
+    background-color: rgb(225, 38, 38);
+    color: #f5f7fb;
+}
+
+@media (max-width: 800px) {
+    .quizpage--array {
+        padding: 25px 0;
+    }
+    .options {
+        flex-direction: column;
+    }
+    .question h3 {
+        display: inline-flex;
+        align-items: flex-start;
+        padding-left: 0;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    .option {
+        width: fit-content;
+        min-width: 250px;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
 }
